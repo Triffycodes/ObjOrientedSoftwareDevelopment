@@ -430,4 +430,14 @@ public class HW {
 
     }
 
+    public static void main(String[] args){
+        ArrayList<String> l = new ArrayList<>();
+        l.add("a");
+        l.add("bc");
+        l.add("dcf");
+        System.out.println(map(l, (String x) -> { return x.length();}));
+        // U = String, V = Integer [1,2,3]
+
+    }
+
 }
