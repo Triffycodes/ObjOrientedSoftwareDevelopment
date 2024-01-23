@@ -111,6 +111,28 @@ public class HW {
 
     return list;
     }
+
+    static record Person(String name, int age, boolean teach) {
+
+        public String name() {
+            return name;
+        }
+
+        public int age() {
+            return age;
+        }
+
+        public boolean teach() {
+            return teach;
+        }
+
+    }
+
+    public static void printFiltered2(ArrayList<Person> l, Predicate<Person> f) {
+        Iterable<Person> l2 = filter(l,f);
+        map(l2, (Person p) -> {return p.name(); });
+
+    }
     
     static <U> U minVal(Iterable<U> l, Comparator<U> c){
         // write using fold.  No other loops or recursion permitted. 
